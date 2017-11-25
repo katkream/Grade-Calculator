@@ -28,9 +28,9 @@
                 }
             }
 			var assignmentSum = 0;
-            for(var i = 0; i < possibleScore.length; i++){
-                if(!isNaN(possibleScore[i])){
-                	assignmentSum += possibleScore[i];
+            for(var k = 0; k < possibleScore.length; k++){
+                if(!isNaN(possibleScore[k])){
+                	assignmentSum += possibleScore[k];
                 }
             }
             alert("You have "+studentSum+" points out of a possible "+assignmentSum);
@@ -75,7 +75,7 @@
 
         for(var i = 0; i < array.length; i++){
 			var tempSplit = array[i].innerHTML.split("/");
-			if(isNaN(parseFloat(tempSplit[0])) && !isNaN(parseFloat(tempSplit[1])) || parseFloat(tempSplit[0]) == 0 ){
+			if(isNaN(parseFloat(tempSplit[0])) && !isNaN(parseFloat(tempSplit[1])) || parseFloat(tempSplit[0]) === 0 ){
                 possibleScore.push(parseInt(tempSplit[1]));
         	}else{
 				studentScore.push(parseInt(tempSplit[0]));
